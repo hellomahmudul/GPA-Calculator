@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Impact, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        margin: 20px;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 0 auto;
+        border: 2px solid #7c795d;
+      }
+
+      h2 {
+        color: #7c795d;
+        font-family: "Trocchi", serif;
+        font-size: 45px;
+        font-weight: normal;
+        line-height: 48px;
+        margin: 0;
+      }
+
+      hr {
+        border: none;
+        border-top: 3px double #7c795d;
+        color: #7c795d;
+        overflow: visible;
+        text-align: center;
+        height: 5px;
+      }
+
+      hr:after {
+        background: #fff;
+        content: "GPA Calculator";
+        padding: 0 4px;
+        position: relative;
+        top: -13px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        font-family: Courier, 'courier new', serif;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        background: #f2f2f2;
+        border-radius: 10px;
+        
+      }
+
+      button {
+        background-color: #219ebc;
+        font-family: Impact, "Arial Narrow Bold", sans-serif;
+        color: #fff;
+        padding: 10px 20px;
+        border: 2px solid #023047;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #023047;
+        border: 2px solid #219ebc;
+      }
+
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid #0074e8;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    </style>
+    <title>GPA Calculator</title>
+  </head>
+  <body>
+    <aside></aside>
+    <form id="gpaForm">
+      <h2>1st Year 1st Semester</h2>
+
+      <hr />
+      <br />
+      <!-- Replace the placeholders with your actual course names -->
+
+      <label for="course1">EEE-101:</label>
+      <input type="text" id="ce1" placeholder="Credit" required />
+      <input type="text" id="ge1" placeholder="Grade Point" required />
+
+      <label for="course2">EEE-102:</label>
+      <input type="text" id="ce2" placeholder="Credit" required />
+      <input type="text" id="ge2" placeholder="Grade Point" required />
+
+      <label for="course3">CSE-101:</label>
+      <input type="text" id="cc1" placeholder="Credit" />
+      <input type="text" id="gc1" placeholder="Grade Point" required/>
+
+      <label for="course4">CSE-102:</label>
+      <input type="text" id="cc2" placeholder="Credit" />
+      <input type="text" id="gc2" placeholder="Grade Point" required/>
+
+      <label for="course5">CSE-104:</label>
+      <input type="text" id="aut1" placeholder="Credit" />
+      <input type="text" id="aug1" placeholder="Grade Point" required/>
+
+      <label for="course6">MATH-101:</label>
+      <input type="text" id="cm1" placeholder="Credit" />
+      <input type="text" id="gm1" placeholder="Grade Point" required/>
+
+      <label for="course7">PHY-101:</label>
+      <input type="text" id="cp1" placeholder="Credit" />
+      <input type="text" id="gp1" placeholder="Grade Point" required/>
+
+      <label for="course8">HUM-101:</label>
+      <input type="text" id="ch1" placeholder="Credit" />
+      <input type="text" id="gh1" placeholder="Grade Point" required/>
+
+      <!-- Repeat the above pattern for other courses -->
+
+      <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+    </form>
+    <br /><br />
+    <div class="result" id="resultContainer" style="display: none">
+      <h2>Your 1st Semester Result</h2>
+      <br />
+      <!-- Display results here using JavaScript -->
+    </div>
+
+    <script>
+      function calculateGPA() {
+        // Get input values
+        var ce1 = parseFloat(document.getElementById("ce1").value);
+        var ge1 = parseFloat(document.getElementById("ge1").value);
+        var ce2 = parseFloat(document.getElementById("ce2").value);
+        var ge2 = parseFloat(document.getElementById("ge2").value);
+        var cc1 = parseFloat(document.getElementById("cc1").value);
+        var gc1 = parseFloat(document.getElementById("gc1").value);
+        var cc2 = parseFloat(document.getElementById("cc2").value);
+        var gc2 = parseFloat(document.getElementById("gc2").value);
+        var cc2 = parseFloat(document.getElementById("cc2").value);
+        var gc2 = parseFloat(document.getElementById("gc2").value);
+        var aut1 = parseFloat(document.getElementById("aut1").value);
+        var aug1 = parseFloat(document.getElementById("aug1").value);
+        var cm1 = parseFloat(document.getElementById("cm1").value);
+        var gm1 = parseFloat(document.getElementById("gm1").value);
+        var cp1 = parseFloat(document.getElementById("cp1").value);
+        var gp1 = parseFloat(document.getElementById("gp1").value);
+        var ch1 = parseFloat(document.getElementById("ch1").value);
+        var gh1 = parseFloat(document.getElementById("gh1").value);
+
+        // Repeat for other courses
+
+        // Replace the following lines with your actual GPA calculation logic
+        // Your GPA calculation logic goes here
+        var calculatedGPA =
+          (ce1 * ge1 +
+            ce2 * ge2 +
+            cc1 * gc1 +
+            cc2 * gc2 +
+            cm1 * gm1 +
+            cp1 * gp1 +
+            ch1 * gh1 +
+            aut1 * aug1) /
+          (ce1 + ce2 + cc1 + cc2 + cm1 + cp1 + ch1 + aut1);
+       
+
+        // Display results
+        var resultContainer = document.getElementById("resultContainer");
+        resultContainer.style.display = "block";
+        resultContainer.innerHTML =
+          "<p>Your 1st Semester GPA is :<br> <strong>" +
+          calculatedGPA.toFixed(2) +
+          "</strong></p>";
+        // Repeat for displaying course results
+      }
+    </script>
+  </body>
+</html>

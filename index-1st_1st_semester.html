@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>1st Year 1st Semester</title>
+    </head>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <div class="header__img">
+                <img src="assets/img/perfil.jpg" alt="">
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="landing.html" class="nav__logo">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Bedimcode</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="#" class="nav__link active">
+                        <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Users</span>
+                        </a>
+                        
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Messages</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bookmark nav__icon' ></i>
+                            <span class="nav__name">Favorites</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-folder nav__icon' ></i>
+                            <span class="nav__name">Data</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
+                            <span class="nav__name">Analytics</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+
+<form id="gpaForm">
+      <h2>1st Year 1st Semester</h2>
+
+      <hr />
+      <br />
+      <!-- Replace the placeholders with your actual course names -->
+
+      <label for="course1">EEE-101: Electrical Circuit I</label>
+      <input type="text" id="ce1" placeholder="Credit" required />
+      <input type="text" id="ge1" placeholder="Grade Point" required />
+
+      <label for="course2">EEE-102: Electrical Circuit I Lab</label>
+      <input type="text" id="ce2" placeholder="Credit" required />
+      <input type="text" id="ge2" placeholder="Grade Point" required />
+
+      <label for="course3">CSE-101: Computer Programming</label>
+      <input type="text" id="cc1" placeholder="Credit" />
+      <input type="text" id="gc1" placeholder="Grade Point" required/>
+
+      <label for="course4">CSE-102: Computer Programming Lab</label>
+      <input type="text" id="cc2" placeholder="Credit" />
+      <input type="text" id="gc2" placeholder="Grade Point" required/>
+
+      <label for="course5">CSE-104: Computer Aided Engineering Drawing</label>
+      <input type="text" id="aut1" placeholder="Credit" />
+      <input type="text" id="aug1" placeholder="Grade Point" required/>
+
+      <label for="course6">MATH-101: Differential And Intigral Calculus</label>
+      <input type="text" id="cm1" placeholder="Credit" />
+      <input type="text" id="gm1" placeholder="Grade Point" required/>
+
+      <label for="course7">PHY-101: Physics</label>
+      <input type="text" id="cp1" placeholder="Credit" />
+      <input type="text" id="gp1" placeholder="Grade Point" required/>
+
+      <label for="course8">HUM-101: Nazrul Studies</label>
+      <input type="text" id="ch1" placeholder="Credit" />
+      <input type="text" id="gh1" placeholder="Grade Point" required/>
+
+      <!-- Repeat the above pattern for other courses -->
+
+      <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+    </form>
+    <br /><br />
+    <div class="result" id="resultContainer" style="display: none">
+      <h2>Your 1st Semester Result</h2>
+      <br />
+      <!-- Display results here using JavaScript -->
+    </div>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

@@ -33,7 +33,7 @@ function colorLink(){
 }
 linkColor.forEach(l=> l.addEventListener('click', colorLink))
 
-function calculateGPA() {
+function calculateGPAAndScroll() {
     // Get input values
     var ce1 = parseFloat(document.getElementById("ce1").value);
     var ge1 = parseFloat(document.getElementById("ge1").value);
@@ -70,12 +70,24 @@ function calculateGPA() {
       (ce1 + ce2 + cc1 + cc2 + cm1 + cp1 + ch1 + aut1);
    
 
-    // Display results
-    var resultContainer = document.getElementById("resultContainer");
-    resultContainer.style.display = "block";
-    resultContainer.innerHTML =
-      "<p>Your 1st Semester GPA is :<br> <strong>" +
-      calculatedGPA.toFixed(2) +
-      "</strong></p>";
+    // // Display results
+    // var resultContainer = document.getElementById("resultContainer");
+    // resultContainer.style.display = "block";
+    // resultContainer.innerHTML =
+    //   "<p>Your 1st Semester GPA is :<br> <strong>" +
+    //   calculatedGPA.toFixed(2) +
+    //   "</strong></p>";
+
+            // Display results
+        var resultContainer = document.getElementById("resultContainer");
+        resultContainer.style.display = "block";
+        resultContainer.innerHTML =
+            "<p>Your 1st Semester GPA is :<br> <strong>" +
+            calculatedGPA.toFixed(2) +
+            "</strong></p>";
+    
+        // Scroll to the result container
+        resultContainer.scrollIntoView({ behavior: "smooth" });
+    
     // Repeat for displaying course results
   }
